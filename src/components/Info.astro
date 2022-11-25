@@ -1,32 +1,60 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Info from "../components/Info.astro";
-import Work from "../components/Work.astro";
-import School from "../components/School.astro";
+import template from "../../public/example-template.json";
+
+export interface IInfo {
+  photo: string;
+  name: string;
+  address: string;
+  phone: string;
+  email: string;
+  personalUrl: string;
+  birthDate: string;
+  summary: string;
+}
+
+const info: IInfo = template.personalInfo;
+const hrefMail = `mailto:${info.email}`;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<section class="container mx-auto p-6 rounded-md">
+  <div id="info" class="flex justify-around">
+    <ul class="inline-grid grid-cols-1 gap-1">
+      <li>❔ {info.name}</li>
+      <li>📨 <a href={hrefMail}>{info.email}</a> &rarr;</li>
+      <li>🔗 <a href={info.personalUrl}>Linkedin &rarr;</a></li>
+      <li>🏠 {info.address}</li>
+      <li>☎️ {info.phone}</li>
+      <li>
+        🗓️ {
+          new Date(info.birthDate)
+            .toLocaleDateString("ja-JP", {
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+            })
+            .replace(/\//gi, "-")
+        }
+      </li>
+    </ul>
 
-  <body>
-    <Layout title="Welcome to cv-template.">
-      <main>
-        <Info />
-      </main>
-    </Layout>
-  </body>
-</html>
+    <img
+      class="object-contain h-96 w-96 overflow-hidden rounded-full p-6"
+      src={info.photo}
+      alt="Profile photo"
+    />
+  </div>
+  <hr />
+  <div id="summary">
+    <p>
+      {info.summary}
+    </p>
+  </div>
+  <hr />
+</section>
 
 <style>
   :root {
-    --white: hsl(0, 0%, 17.5%);
+	--white: hsl(0, 0%, 17.5%);
     --black: hsl(0, 0%, 100%);
     --black-025: hsl(0, 0%, 22.5%);
     --black-050: hsl(0, 0%, 24%);
@@ -39,10 +67,7 @@ import School from "../components/School.astro";
     --black-400: hsl(210, 8%, 65%);
     --black-500: hsl(210, 8%, 70%);
     --black-600: hsl(210, 7%, 78.5%);
-    --black-700: hsl(210, 8%, 82.5%);
-    --black-750: hsl(210, 9%, 86.5%);
-    --black-800: hsl(210, 9%, 91.5%);
-    --black-900: hsl(210, 4%, 95%);
+
     --orange-050: hsl(27, 16.5%, 23.9%);
     --orange-100: hsl(27, 30%, 28.4%);
     --orange-200: hsl(27, 50%, 36.9%);
@@ -50,9 +75,7 @@ import School from "../components/School.astro";
     --orange-400: hsl(27, 90.5%, 54.9%);
     --orange-500: hsl(27, 100%, 59%);
     --orange-600: hsl(27, 100%, 68.4%);
-    --orange-700: hsl(27, 89.5%, 74.1%);
-    --orange-800: hsl(27, 92%, 85.7%);
-    --orange-900: hsl(27, 95%, 91.8%);
+
     --blue-050: hsl(206, 40%, 23%);
     --blue-100: hsl(206, 44%, 26%);
     --blue-200: hsl(206, 46%, 30%);
@@ -60,9 +83,7 @@ import School from "../components/School.astro";
     --blue-400: hsl(209, 56%, 43%);
     --blue-500: hsl(206, 64%, 51%);
     --blue-600: hsl(206, 100%, 60%);
-    --blue-700: hsl(206, 90%, 74%);
-    --blue-800: hsl(206, 95%, 86%);
-    --blue-900: hsl(206, 91%, 91.5%);
+
     --powder-050: hsl(205, 5%, 27%);
     --powder-100: hsl(205, 14%, 28%);
     --powder-200: hsl(205, 17.5%, 32%);
@@ -70,9 +91,7 @@ import School from "../components/School.astro";
     --powder-400: hsl(205, 22.5%, 44%);
     --powder-500: hsl(205, 29%, 54%);
     --powder-600: hsl(205, 50%, 65.5%);
-    --powder-700: hsl(205, 46.5%, 73.5%);
-    --powder-800: hsl(205, 49.5%, 87%);
-    --powder-900: hsl(205, 100%, 95%);
+
     --green-025: hsl(140, 18%, 22%);
     --green-050: hsl(140, 18%, 25%);
     --green-100: hsl(140, 22.5%, 31%);
@@ -81,9 +100,7 @@ import School from "../components/School.astro";
     --green-400: hsl(140, 27.5%, 48.5%);
     --green-500: hsl(140, 35%, 54.5%);
     --green-600: hsl(140, 40%, 61.5%);
-    --green-700: hsl(140, 39.5%, 69.5%);
-    --green-800: hsl(140, 39.5%, 78.5%);
-    --green-900: hsl(140, 38%, 86.5%);
+
     --yellow-050: hsl(47, 13%, 24.5%);
     --yellow-100: hsl(47, 19%, 27%);
     --yellow-200: hsl(47, 30.5%, 31%);
@@ -91,9 +108,7 @@ import School from "../components/School.astro";
     --yellow-400: hsl(47, 45.5%, 42.5%);
     --yellow-500: hsl(47, 55.5%, 48%);
     --yellow-600: hsl(47, 67.5%, 55.5%);
-    --yellow-700: hsl(47, 84.5%, 64%);
-    --yellow-800: hsl(47, 90%, 72.5%);
-    --yellow-900: hsl(47, 93%, 83.5%);
+
     --red-025: hsl(1, 10%, 24%);
     --red-050: hsl(1, 30%, 26.5%);
     --red-100: hsl(1, 35%, 33%);
@@ -102,9 +117,7 @@ import School from "../components/School.astro";
     --red-400: hsl(1, 42%, 49%);
     --red-500: hsl(1, 50%, 54%);
     --red-600: hsl(1, 56.5%, 59.5%);
-    --red-700: hsl(1, 62.5%, 65.5%);
-    --red-800: hsl(1, 64%, 74%);
-    --red-900: hsl(1, 65.5%, 85.5%);
+
     --gold: hsl(48, 100%, 50%);
     --gold-lighter: hsl(48, 22%, 30%);
     --gold-darker: hsl(45, 100%, 47%);
@@ -121,12 +134,20 @@ import School from "../components/School.astro";
 	--color-bg-secondary: var(--black-400);
   }
 
-  html {
-    background-color: var(--color-bg-secondary);
+  section {
+	background-color: var(--color-bg-primary);
+    border: solid;
+    border-color: var(--gold);
   }
 
-  main {
-	padding-top: 1rem;
-    color: var(--color-primary);
+  #info {
+  }
+
+  a {
+    cursor: pointer;
+    color: var(--blue-600);
+  }
+
+  #summary {
   }
 </style>

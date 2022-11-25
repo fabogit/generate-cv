@@ -1,0 +1,110 @@
+{
+	"personalInformations": {
+		"name": "",
+		"address": "",
+		"phone": "",
+		"email": "",
+		"personalUrl": "",
+		"birthDate": "",
+		"nationality": "",
+		"summary": ""
+	},
+	"workExperience": [
+		{
+			"company": "",
+			"role": "",
+			"startDate": "",
+			"endDate": "",
+			"tasks": [
+				"",
+				"",
+				""
+			]
+		}
+	],
+	"education": [
+		{
+			"schoolInstitute": "",
+			"description": "",
+			"startDate": "",
+			"endDate": "",
+			"notes": ""
+		}
+	],
+	"skills": {
+		"languages": [
+			{
+				"language": "",
+				"understanding": {
+					"listening": "",
+					"reading": ""
+				},
+				"speaking": {
+					"interaction": "",
+					"production": ""
+				},
+				"writing": ""
+			}
+		],
+		"softSkills": [
+			"",
+			""
+		],
+		"it": {
+			"languages": [
+				""
+			],
+			"backend": [
+				{
+					"language": "",
+					"frameworks": [
+						""
+					]
+				}
+			],
+			"frontend": [
+				{
+					"language": "",
+					"frameworks": [
+						""
+					]
+				}
+			],
+			"databases": {
+				"sql": [
+					"",
+					""
+				],
+				"noSql": [
+					"",
+					""
+				],
+				"gdb": [
+					""
+				]
+			},
+			"cloud": {
+				"description": "",
+				"providers": [
+					"",
+					""
+				]
+			},
+			"software": {
+				"description": "",
+				"list": [
+					""
+				]
+			},
+			"os": {
+				"description": "",
+				"list": [
+					""
+				]
+			},
+			"extra": [
+				""
+			]
+		}
+	}
+}

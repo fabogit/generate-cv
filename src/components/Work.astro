@@ -1,5 +1,21 @@
 ---
+import { log } from "astro/dist/core/logger/core";
 import template from "../../public/example-template.json";
 
+export interface IWork {
+  logo: string;
+  company: string;
+  role: string;
+  startDate: string;
+  endDate: string;
+  tasks: string[];
+}
 
+const work: IWork[] = template.workExp;
 ---
+
+<section>
+	{console.log(work)}
+</section>
+
+<style></style>

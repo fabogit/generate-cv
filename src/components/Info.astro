@@ -17,14 +17,21 @@ const hrefMail = `mailto:${info.email}`;
 ---
 
 <section class="container mx-auto p-6 rounded-md">
-  <div id="info" class="flex justify-around">
+  <h1>INFORMAZIONI PERSONALI</h1>
+  <div class="flex justify-around">
     <ul class="inline-grid grid-cols-1 gap-1">
       <li>❔ {info.name}</li>
-      <li>📨 <a href={hrefMail}>{info.email}</a> &rarr;</li>
-      <li>🔗 <a href={info.personalUrl}>Linkedin &rarr;</a></li>
+      <li>
+        📨
+        <a href={hrefMail}>{info.email}</a>&rarr;
+      </li>
+      <li>
+        🔗
+        <a href={info.personalUrl}>Linkedin</a>&rarr;
+      </li>
       <li>🏠 {info.address}</li>
       <li>☎️ {info.phone}</li>
-      <li>
+      <!-- <li>
         🗓️ {
           new Date(info.birthDate)
             .toLocaleDateString("ja-JP", {
@@ -34,7 +41,7 @@ const hrefMail = `mailto:${info.email}`;
             })
             .replace(/\//gi, "-")
         }
-      </li>
+      </li> -->
     </ul>
 
     <img
@@ -44,7 +51,7 @@ const hrefMail = `mailto:${info.email}`;
     />
   </div>
   <hr />
-  <div id="summary">
+  <div>
     <p>
       {info.summary}
     </p>
@@ -55,19 +62,22 @@ const hrefMail = `mailto:${info.email}`;
 <style>
   section {
     background-color: var(--color-bg-primary);
-	/* TODO remove */
+    /* TODO remove */
     border: solid;
     border-color: var(--gold);
   }
 
-  #info {
+  h1 {
+    font-size: x-large;
+    padding-bottom: 1.75rem;
+  }
+
+  li {
+    font-size: large;
   }
 
   a {
     cursor: pointer;
     color: var(--blue-600);
-  }
-
-  #summary {
   }
 </style>

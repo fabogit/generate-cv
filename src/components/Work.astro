@@ -1,5 +1,4 @@
 ---
-import { log } from "astro/dist/core/logger/core";
 import template from "../../public/example-template.json";
 
 export interface IWork {
@@ -11,11 +10,69 @@ export interface IWork {
   tasks: string[];
 }
 
-const work: IWork[] = template.workExp;
+const works: IWork[] = template.workExp;
 ---
 
-<section>
-	{console.log(work)}
+<section class="container mx-auto rounded-md">
+  <h1>ESPERIENZA LAVORATIVA</h1>
+  <ul>
+    {
+      works.map((work) => (
+        <li>
+          <div id="company" class="flex flex-row">
+            <img
+              class="object-scale-down h-8 w-8 rounded"
+              src={work.logo}
+              alt="Company logo"
+            />
+            <h2>{work.company}</h2>
+          </div>
+          <h3>
+            🗓️ {work.startDate} / {work.endDate}, 🧑‍💻 {work.role}
+          </h3>
+          <ul id="tasks">
+            {work.tasks.map((task) => (
+              <li>{task}</li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
 </section>
 
-<style></style>
+<style>
+  section {
+    background-color: var(--color-bg-primary);
+    padding: 2rem;
+    /* TODO remove */
+    border: solid;
+    border-color: var(--gold);
+  }
+
+  h1 {
+    font-size: x-large;
+    padding-bottom: 1.75rem;
+  }
+
+  h2 {
+    padding-left: 0.75rem;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: large;
+    padding-bottom: 0.5rem;
+  }
+
+  #company {
+    padding-bottom: 0.5rem;
+  }
+
+  #tasks {
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    list-style: disc;
+  }
+</style>

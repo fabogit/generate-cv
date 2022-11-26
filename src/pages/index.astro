@@ -6,29 +6,26 @@ import Work from "../components/Work.astro";
 import School from "../components/School.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-
-  <body>
-    <Layout title="Welcome to cv-template.">
-      <main>
-        <Info />
-        <Work />
-        <School />
-      </main>
-    </Layout>
-  </body>
-</html>
+<Layout title="Welcome to cv-template.">
+  <main>
+    <section>
+      <Info />
+    </section>
+    <section>
+      <Work />
+    </section>
+    <section>
+      <School />
+    </section>
+  </main>
+</Layout>
 
 <style>
   main {
-    padding: 1.5rem;
-    color: var(--color-primary);
+    padding-top: 0.5rem;
+  }
+
+  section {
+    padding: 0.5rem 1rem;
   }
 </style>

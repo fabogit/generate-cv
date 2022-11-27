@@ -1,0 +1,185 @@
+---
+import template from "../../public/example-template.json";
+
+export interface IFramework {
+  logo: string;
+  language: string;
+  name: string;
+}
+
+export interface IList {
+  logo: string;
+  name: string;
+  type?: string;
+}
+
+const languages = template.skills.it.languages;
+
+const backends: IFramework[] = template.skills.it.backend;
+const frontends: IFramework[] = template.skills.it.frontend;
+const databases: IList[] = template.skills.it.databases;
+const providers: IList[] = template.skills.it.cloud.providers;
+const OsDistros: IList[] = template.skills.it.os.list;
+
+const extras = template.skills.it.extra;
+---
+
+<section class="container mx-auto rounded-md">
+  <h1>Conoscenze informatiche</h1>
+
+  <ul id="extras">
+    {extras.map((extra) => <li style="list-style: circle;">{extra}</li>)}
+  </ul>
+
+  <div id="languages">
+    <ul>
+      <ul class="flex items-center flex-row">
+        <h2>Linguaggi:</h2>
+        {
+          languages.map((item) => (
+            <li class="rounded-md p-2">
+              <div class="flex items-center flex-row">
+                <img
+                  class="object-scale-down h-8 w-8 rounded"
+                  src={item.logo}
+                  alt="logo"
+                />
+                <h3>{item.name}</h3>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+
+      <ul class="flex items-center flex-row">
+        <h2>Frontend:</h2>
+        {
+          frontends.map((frontend) => (
+            <li class="rounded-md p-2">
+              <div class="flex items-center flex-row">
+                <img
+                  class="object-scale-down h-8 w-8 rounded"
+                  src={frontend.logo}
+                  alt="logo"
+                />
+                <h3>{frontend.name}</h3>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+
+      <ul class="flex items-center flex-row">
+        <h2>Backend:</h2>
+        {
+          backends.map((backend) => (
+            <li class="rounded-md p-2">
+              <div class="flex items-center flex-row">
+                <img
+                  class="object-scale-down h-8 w-8 rounded"
+                  src={backend.logo}
+                  alt="logo"
+                />
+                <h3>{backend.name}</h3>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+
+      <ul class="flex items-center flex-row">
+        <h2>Databases:</h2>
+        {
+          databases.map((database) => (
+            <li class="rounded-md p-2">
+              <div class="flex items-center flex-row">
+                <img
+                  class="object-scale-down h-8 w-8 rounded"
+                  src={database.logo}
+                  alt="logo"
+                />
+                <h3>{database.name}</h3>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+
+      <ul class="flex items-center flex-row">
+        <h2>Cloud:</h2>
+        {
+          providers.map((provider) => (
+            <li class="rounded-md p-2">
+              <div class="flex items-center flex-row">
+                <img
+                  class="object-scale-down h-8 w-8 rounded"
+                  src={provider.logo}
+                  alt="logo"
+                />
+                <h3>{provider.name}</h3>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+
+      <ul class="flex items-center flex-row">
+        <h2>Os:</h2>
+        {
+          OsDistros.map((distro) => (
+            <li class="rounded-md p-2">
+              <div class="flex items-center flex-row">
+                <img
+                  class="object-scale-down h-8 w-8 rounded"
+                  src={distro.logo}
+                  alt="logo"
+                />
+                <h3>{distro.name}</h3>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </ul>
+  </div>
+</section>
+
+<style>
+  section {
+    border: solid;
+    border-color: lightgrey;
+  }
+
+  h1 {
+    font-size: x-large;
+    padding-bottom: 0.25rem;
+    /* padding-top: 1rem; */
+    padding-left: 1rem;
+  }
+
+  li {
+    margin: 0.25rem 0;
+  }
+
+  img {
+    border: transparent;
+    border-color: lightgrey;
+    border-width: 1px;
+  }
+
+  h2 {
+    padding-left: 1rem;
+    font-size: larger;
+    /* font-weight: bold; */
+  }
+
+  h3 {
+    font-size: large;
+    padding-left: 0.25rem;
+    padding-right: 0.1rem;
+  }
+
+  #extras {
+    padding-left: 2rem;
+  }
+</style>

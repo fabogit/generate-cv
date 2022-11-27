@@ -28,7 +28,7 @@ const works: IWork[] = template.workExp;
             <h2>{work.company}</h2>
           </div>
           <h3>
-            🗓️ {work.startDate} / {work.endDate}, 🧑‍💻 {work.role}
+            {work.startDate} / {work.endDate}, {work.role}
           </h3>
           <ul id="tasks">
             {work.tasks.map((task) => (
@@ -45,7 +45,7 @@ const works: IWork[] = template.workExp;
   h1 {
     font-size: x-large;
     padding-bottom: 0.25rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-left: 1rem;
   }
 
@@ -68,13 +68,17 @@ const works: IWork[] = template.workExp;
 
   #company {
     border: solid;
-    box-shadow: 2px 4px 4px lightgray;
     border-color: lightgrey;
     margin: 0.75rem 0;
   }
 
   #tasks {
     padding-left: 1.5rem;
-    list-style: disc;
+	list-style: circle;
+	font-size: 0.9rem;
+  }
+
+  #tasks, li {
+	padding-top: 0.1rem;
   }
 </style>

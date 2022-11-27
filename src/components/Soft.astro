@@ -1,0 +1,36 @@
+---
+import template from "../../public/example-template.json";
+
+const sSkills: string[] = template.skills.softSkills;
+---
+
+<section class="container mx-auto rounded-md">
+  <h1>Soft skills</h1>
+  <ul>
+    {sSkills.map((skill) => <li>{skill}</li>)}
+  </ul>
+</section>
+
+<style>
+  h1 {
+    font-size: x-large;
+    padding-bottom: 0.25rem;
+    /* padding-top: 1rem; */
+    padding-left: 1rem;
+  }
+
+  section {
+    border: solid;
+    border-color: lightgrey;
+  }
+
+  ul {
+    padding-left: 2rem;
+  }
+
+  li {
+    margin: 0.75rem 0;
+    list-style: circle;
+	font-size: 0.95rem;
+  }
+</style>

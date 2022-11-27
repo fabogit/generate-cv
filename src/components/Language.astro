@@ -1,0 +1,95 @@
+---
+import template from "../../public/example-template.json";
+
+export interface ILanguage {
+  language: string;
+  understanding: {
+    listening: string;
+    reading: string;
+  };
+  speaking: {
+    interaction: string;
+    production: string;
+  };
+  writing: string;
+}
+
+const languages: ILanguage[] = template.skills.languages;
+const mainLanguage = template.skills.mainLanguage;
+---
+
+<section class="container mx-auto rounded-md">
+  <h1>COMPETENZE PERSONALI</h1>
+
+  <div id="languages">
+    <ul>
+      <li class="rounded-md p-2">
+        <div class="flex items-center flex-row">
+          <h2>{mainLanguage}:</h2>
+          <p style="padding-left: 0.5rem;">Madrelingua</p>
+
+          {
+            languages.map((language) => (
+              <div class="rounded-md p-2">
+                <div id="cefr" class="flex items-center flex-row">
+                  <h2>{language.language}:</h2>
+                  <h3>Orale</h3>
+                  <div>
+                    <p>Interazione: {language.speaking.interaction}</p>
+                    <p>Espressione: {language.speaking.production}</p>
+                  </div>
+                  <h3>Comprensione</h3>
+                  <div>
+                    <p>Ascolto: {language.understanding.listening}</p>
+                    <p>Lettura: {language.understanding.reading}</p>
+                  </div>
+                  <div class="flex items-center flex-row">
+                    <h3>Scrittura</h3>
+                    <p style="padding-left: 0.1rem;">
+                      Espressione scritta {language.writing}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  h1 {
+    font-size: x-large;
+    padding-bottom: 0.25rem;
+    /* padding-top: 1rem; */
+    padding-left: 1rem;
+  }
+
+  li {
+    border: solid;
+    border-color: lightgrey;
+    margin: 0.75rem 0;
+  }
+
+  h2 {
+    padding-left: 0.75rem;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: large;
+    padding-left: 0.5rem;
+    padding-right: 0.25rem;
+  }
+
+  p {
+    padding-right: 1.25rem;
+  }
+
+  #cefr {
+    padding-left: 0.5rem;
+  }
+</style>

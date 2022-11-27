@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Info from "../components/Info.astro";
 import Work from "../components/Work.astro";
 import School from "../components/School.astro";
+import Language from "../components/Language.astro";
+import Soft from "../components/Soft.astro";
+import It from "../components/It.astro";
 ---
 
 <Layout title="Welcome to cv-template.">
@@ -17,15 +19,24 @@ import School from "../components/School.astro";
     <section>
       <School />
     </section>
+    <section>
+      <Language />
+    </section>
+    <section>
+      <Soft />
+    </section>
+    <section>
+      <It />
+    </section>
   </main>
 </Layout>
 
 <style>
   main {
-    padding-top: 0.5rem;
+    padding-top: 0.25rem;
   }
 
   section {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
 </style>

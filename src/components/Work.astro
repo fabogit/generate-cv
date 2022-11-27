@@ -14,12 +14,12 @@ const works: IWork[] = template.workExp;
 ---
 
 <section class="container mx-auto rounded-md">
-  <h1>ESPERIENZA LAVORATIVA</h1>
+  <h1>ESPERIENZE LAVORATIVE</h1>
   <ul>
     {
       works.map((work) => (
-        <li>
-          <div id="company" class="flex flex-row">
+        <li id="company" class="rounded-md p-2">
+          <div id="details" class="flex items-center flex-row">
             <img
               class="object-scale-down h-8 w-8 rounded"
               src={work.logo}
@@ -42,17 +42,17 @@ const works: IWork[] = template.workExp;
 </section>
 
 <style>
-  section {
-    background-color: var(--color-bg-primary);
-    padding: 2rem;
-    /* TODO remove */
-    border: solid;
-    border-color: var(--gold);
-  }
-
   h1 {
     font-size: x-large;
-    padding-bottom: 1.75rem;
+    padding-bottom: 0.25rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+
+  img {
+    border: solid;
+    border-color: lightgrey;
+    border-width: 1px;
   }
 
   h2 {
@@ -67,12 +67,14 @@ const works: IWork[] = template.workExp;
   }
 
   #company {
-    padding-bottom: 0.5rem;
+    border: solid;
+    box-shadow: 2px 4px 4px lightgray;
+    border-color: lightgrey;
+    margin: 0.75rem 0;
   }
 
   #tasks {
     padding-left: 1.5rem;
-    padding-bottom: 2rem;
     list-style: disc;
   }
 </style>

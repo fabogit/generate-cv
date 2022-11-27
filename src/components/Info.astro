@@ -3,11 +3,20 @@ import template from "../../public/example-template.json";
 
 export interface IInfo {
   photo: string;
+  logoPerson: string;
   name: string;
-  address: string;
-  phone: string;
+  logoJob: string;
+  jobTitle: string;
+  logoGit: string;
+  urlGit: string;
+  logoLkd: string;
+  urlLkd: string;
+  logoEmail: string;
   email: string;
-  personalUrl: string;
+  logoAddress: string;
+  address: string;
+  logoPhone: string;
+  phone: string;
   birthDate: string;
   summary: string;
 }
@@ -18,22 +27,79 @@ const hrefMail = `mailto:${info.email}`;
 
 <section class="container mx-auto p-6 rounded-md">
   <h1>INFORMAZIONI PERSONALI</h1>
-  <div class="flex justify-around">
+  <div class="flex items-center justify-around">
+    <img
+      class="object-contain h-64 w-64 overflow-hidden rounded-full p-6"
+      src={info.photo}
+      alt="Profile photo"
+    />
+
     <ul class="inline-grid grid-cols-1 gap-1">
-      <li>❔ {info.name}</li>
-      <li>
-        📨
-        <a href={hrefMail}>{info.email}</a>&rarr;
+      <li class="flex items-center flex-row">
+        <img
+          class="object-scale-down h-10 w-10 rounded"
+          src={info.logoPerson}
+          alt="logo"
+        />
+        <h2>{info.name}</h2>
       </li>
-      <li>
-        🔗
-        <a href={info.personalUrl}>Linkedin</a>&rarr;
+
+      <li class="flex items-center flex-row">
+        <img
+          class="object-scale-down h-10 w-10 rounded"
+          src={info.logoJob}
+          alt="logo"
+        />
+        <h2>{info.jobTitle}</h2>
       </li>
-      <li>🏠 {info.address}</li>
-      <li>☎️ {info.phone}</li>
+
+      <li class="flex items-center flex-row">
+        <img
+          class="object-scale-down h-10 w-10 rounded"
+          src={info.logoEmail}
+          alt="logo"
+        />
+        <h2><a href={hrefMail}>{info.email}</a>&rarr;</h2>
+      </li>
+
+      <li class="flex items-center flex-row">
+        <img
+          class="object-scale-down h-10 w-10 rounded"
+          src={info.logoLkd}
+          alt="logo"
+        />
+        <h2><a href={info.urlLkd}>Linkedin</a>&rarr;</h2>
+      </li>
+
+      <li class="flex items-center flex-row">
+        <img
+          class="object-scale-down h-10 w-10 rounded"
+          src={info.logoGit}
+          alt="logo"
+        />
+        <h2><a href={info.urlGit}>GitHub</a>&rarr;</h2>
+      </li>
+
+      <li class="flex items-center flex-row">
+        <img
+          class="object-scale-down h-10 w-10 rounded"
+          src={info.logoPhone}
+          alt="logo"
+        />
+        <h2>{info.phone}</h2>
+      </li>
+
+      <li class="flex items-center flex-row">
+        <img
+          class="object-scale-down h-10 w-10 rounded"
+          src={info.logoAddress}
+          alt="logo"
+        />
+        <h2>{info.address}</h2>
+      </li>
+
       <!-- <li>
-        🗓️ {
-          new Date(info.birthDate)
+        🗓️ {new Date(info.birthDate)
             .toLocaleDateString("ja-JP", {
               year: "numeric",
               month: "2-digit",
@@ -43,12 +109,6 @@ const hrefMail = `mailto:${info.email}`;
         }
       </li> -->
     </ul>
-
-    <img
-      class="object-contain h-96 w-96 overflow-hidden rounded-full p-6"
-      src={info.photo}
-      alt="Profile photo"
-    />
   </div>
   <hr />
   <div>
@@ -61,10 +121,10 @@ const hrefMail = `mailto:${info.email}`;
 
 <style>
   section {
-    background-color: var(--color-bg-primary);
-    /* TODO remove */
+    /* background-color: var(--color-bg-primary); */
     border: solid;
-    border-color: var(--gold);
+    border-color: lightgrey;
+	box-shadow: 2px 6px 4px lightgray;
   }
 
   h1 {
@@ -72,12 +132,21 @@ const hrefMail = `mailto:${info.email}`;
     padding-bottom: 1.75rem;
   }
 
-  li {
-    font-size: large;
+  h2 {
+    padding-left: 1rem;
+    font-size: 1.25rem;
+  }
+
+  ul {
+    padding-bottom: 1rem;
   }
 
   a {
     cursor: pointer;
     color: var(--blue-600);
+  }
+
+  p {
+	padding: 1rem 1.5rem;
   }
 </style>

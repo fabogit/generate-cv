@@ -15,12 +15,12 @@ const school: ISchool[] = template.education;
 ---
 
 <section class="container mx-auto rounded-md">
-  <h1>EDUCAZIONE</h1>
+  <h1>ISTRUZIONE</h1>
   <ul>
     {
       school.map((school) => (
-        <li>
-          <div id="school" class="flex flex-row">
+        <li class="rounded-md p-2">
+          <div id="school" class="flex items-center flex-row">
             <img
               class="object-scale-down h-8 w-8 rounded"
               src={school.logo}
@@ -41,17 +41,18 @@ const school: ISchool[] = template.education;
 </section>
 
 <style>
-  section {
-    background-color: var(--color-bg-primary);
-    padding: 2rem;
-    /* TODO remove */
-    border: solid;
-    border-color: var(--gold);
-  }
-
   h1 {
     font-size: x-large;
-    padding-bottom: 1.75rem;
+    padding-bottom: 0.25rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+
+  li {
+    border: solid;
+    box-shadow: 2px 4px 4px lightgray;
+    border-color: lightgrey;
+    margin: 0.75rem 0;
   }
 
   h2 {
@@ -62,15 +63,11 @@ const school: ISchool[] = template.education;
 
   h3 {
     font-size: large;
-    padding-bottom: 0.5rem;
-  }
-
-  #school {
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.5rem; */
   }
 
   #details {
-    padding-left: 1.5rem;
-    padding-bottom: 2rem;
+    padding-left: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 </style>

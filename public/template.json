@@ -1,12 +1,21 @@
 {
 	"personalInformations": {
+		"photo": "",
+		"logoPerson": "",
 		"name": "",
-		"address": "",
-		"phone": "",
+		"logoJob": "",
+		"jobTitle": "",
+		"logoGit": "",
+		"urlGit": "",
+		"logoLkd": "",
+		"urlLkd": "",
+		"logoEmail": "",
 		"email": "",
-		"personalUrl": "",
+		"logoAddress": "",
+		"address": "",
+		"logoPhone": "",
+		"phone": "",
 		"birthDate": "",
-		"nationality": "",
 		"summary": ""
 	},
 	"workExperience": [

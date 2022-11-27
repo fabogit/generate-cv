@@ -1,0 +1,43 @@
+---
+import sign from "../../public/images/sign.jpg";
+---
+
+<section class="container mx-auto rounded-md p-6">
+  <hr />
+
+  <p>
+    Autorizzo il trattamento dei dati personali contenuti nel mio curriculum
+    vitae in base all’art. 13 del D. Lgs. 196/2003 e all’art. 13 del Regolamento
+    UE 2016/679 relativo alla protezione delle persone fisiche con riguardo al
+    trattamento dei dati personali.
+  </p>
+
+  <hr />
+
+  <div id="details" class="flex items-center flex-row">
+    <h1>
+      Torino, {
+        new Date().toLocaleDateString("ja-JP", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        })
+      }
+    </h1>
+    <img class="object-scale-down h-46 w-46" src={sign} alt="Sign" />
+  </div>
+</section>
+
+<style>
+  h1 {
+    font-size: x-large;
+    padding-bottom: 0.25rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 3rem;
+  }
+
+  #details {
+    padding-top: 3rem;
+  }
+</style>

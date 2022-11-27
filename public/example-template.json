@@ -1,0 +1,249 @@
+{
+	"personalInfo": {
+		"photo": "/images/info/photo.png",
+		"logoPerson": "/images/info/person.png",
+		"name": "Wile Coyote",
+		"logoJob": "/images/info/job.png",
+		"jobTitle": "CEO @Acme Corp",
+		"logoGit": "/images/info/github.png",
+		"urlGit": "https://github.com/",
+		"logoLkd": "/images/info/linkedin.png",
+		"urlLkd": "http://www.linkedin.com/",
+		"logoEmail": "/images/info/email.png",
+		"email": "your@email.com",
+		"logoAddress": "/images/info/location.png",
+		"address": "The southwest American desert",
+		"logoPhone": "/images/info/phone.png",
+		"phone": "+39 1234567",
+		"birthDate": "1900/01/01",
+		"summary": [
+			"Lorem",
+			"Ipsum",
+			"Have Brain, will travel."
+		]
+	},
+	"workExp": [
+		{
+			"logo": "/images/work/acme.png",
+			"company": "Acme Corporation",
+			"role": "CEO",
+			"startDate": "2000-02",
+			"endDate": "",
+			"tasks": [
+				"After years of suffering im the boss",
+				"I do what i want"
+			]
+		},
+		{
+			"logo": "/images/work/acme.png",
+			"company": "Acme Corporation",
+			"role": "Rocket Riding intern",
+			"startDate": "1950-02",
+			"endDate": "2000-02",
+			"tasks": [
+				"Build Rockets",
+				"Ride Rockets"
+			]
+		}
+	],
+	"education": [
+		{
+			"logo": "/images/school/mit.png",
+			"schoolInstitute": "Massachusetts Institute of Technology",
+			"description": "Rocket Science",
+			"startDate": "1900",
+			"endDate": "1950",
+			"notes": "Rockets Rocks!"
+		}
+	],
+	"skills": {
+		"mainLanguage": "Italiano",
+		"languages": [
+			{
+				"language": "Inglese",
+				"understanding": {
+					"listening": "B2",
+					"reading": "C1"
+				},
+				"speaking": {
+					"interaction": "B1",
+					"production": "B1"
+				},
+				"writing": "B1"
+			}
+		],
+		"softSkills": [
+			"Metodologia Agile/Scrum",
+			"Indipendenza e problem solving",
+			"Capacità di collaborare in team remoto e internazionale, Pair programming",
+			"Costante interesse ad apprendere nuove abilità e perfezionare quelle già conosciute"
+		],
+		"it": {
+			"languages": [
+				{
+					"logo": "/images/skills/python.png",
+					"name": "Python"
+				},
+				{
+					"logo": "/images/skills/js.png",
+					"name": "Javascript"
+				},
+				{
+					"logo": "/images/skills/ts.png",
+					"name": "Typescript"
+				}
+			],
+			"backend": [
+				{
+					"logo": "/images/skills/flask.png",
+					"language": "Python",
+					"name": "Flask"
+				},
+				{
+					"logo": "/images/skills/django.png",
+					"language": "Python",
+					"name": "Django"
+				},
+				{
+					"logo": "/images/skills/node.png",
+					"language": "TypeScript",
+					"name": "Node.Js"
+				},
+				{
+					"logo": "/images/skills/express.png",
+					"language": "TypeScript",
+					"name": "Express"
+				},
+				{
+					"logo": "/images/skills/nest.png",
+					"language": "TypeScript",
+					"name": "NestJS"
+				},
+				{
+					"logo": "/images/skills/astro.png",
+					"language": "TypeScript",
+					"name": "Astro"
+				}
+			],
+			"frontend": [
+				{
+					"logo": "/images/skills/angularjs.png",
+					"language": "Javascript",
+					"name": "AngularJS"
+				},
+				{
+					"logo": "/images/skills/angular.png",
+					"language": "TypeScript",
+					"name": "Angular"
+				},
+				{
+					"logo": "/images/skills/react.png",
+					"language": "TypeScript",
+					"name": "React"
+				},
+				{
+					"logo": "/images/skills/vuejs.png",
+					"language": "TypeScript",
+					"name": "Vue"
+				}
+			],
+			"databases": [
+				{
+					"logo": "/images/skills/mysql.png",
+					"name": "MySql",
+					"type": "Sql"
+				},
+				{
+					"logo": "/images/skills/postgresql.png",
+					"name": "PostgreSql",
+					"type": "Sql"
+				},
+				{
+					"logo": "/images/skills/mongodb.png",
+					"name": "MongoDb",
+					"type": "NoSql"
+				},
+				{
+					"logo": "/images/skills/redis.png",
+					"name": "Redis",
+					"type": "NoSql"
+				},
+				{
+					"logo": "/images/skills/neo4j.png",
+					"name": "Neo4J",
+					"type": "gdb"
+				}
+			],
+			"cloud": {
+				"description": "I like the cloud",
+				"providers": [
+					{
+						"logo": "/images/skills/aws.png",
+						"name": "AWS"
+					},
+					{
+						"logo": "/images/skills/azure.png",
+						"name": "Azure"
+					},
+					{
+						"logo": "/images/skills/heroku.png",
+						"name": "Heroku"
+					},
+					{
+						"logo": "/images/skills/vercel.png",
+						"name": "Vercel"
+					},
+					{
+						"logo": "/images/skills/railway.png",
+						"name": "Railway"
+					}
+				]
+			},
+			"software": {
+				"description": "Some random software",
+				"list": [
+					"AcmeGUI",
+					"RocketSimulator"
+				]
+			},
+			"os": {
+				"description": "Installazione ed amministrazione sistemi operativi",
+				"list": [
+					{
+						"logo": "/images/skills/arch.png",
+						"name": "Arch Linux"
+					},
+					{
+						"logo": "/images/skills/fedora.png",
+						"name": "Fedora"
+					},
+					{
+						"logo": "/images/skills/manjaro.png",
+						"name": "Manjaro"
+					},
+					{
+						"logo": "/images/skills/debian.png",
+						"name": "Debian"
+					},
+					{
+						"logo": "/images/skills/ubuntu.png",
+						"name": "Ubuntu"
+					},
+					{
+						"logo": "/images/skills/win.png",
+						"name": "Windows XP, 7, 10, 11"
+					}
+				]
+			},
+			"extra": [
+				"Tool di versionamento Git",
+				"Sviluppo web di tipo SPA e SSR, Html (Handlebars, Ejs) & Css (Bootstrap, Tailwindcss, Scss)",
+				"Utilizzo di container Docker per sviluppi in locale e in cloud (dockerfile, docker-compose)",
+				"Unit test ed Integration test (Jest, Vitest)",
+				"Messaging system (Nats), WebRTC, Websocket (Socket.io)",
+				"Installazione ed amministrazione di sistemi operativi e macchine virtuali (Oracle VirtualBox, VMWare Workstation)",
+				"Conoscenza dei fondamenti di analisi dati, machine learning, big data, ETL (Pandas, Numpy, Matplotlib, Seaborn, TensorFlow, Keras)"
+			]
+		}
+	}
+}

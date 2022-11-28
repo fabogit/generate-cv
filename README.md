@@ -1,3 +1,9 @@
+# To customize edit `/public/example-template.json`
+
+- The data is in `/public/example-template.json` to customize edit the fields
+
+- Also update the images in `/public/images/`
+
 # Welcome to [Astro](https://astro.build)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)

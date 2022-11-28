@@ -1,4 +1,4 @@
-# To customize edit `/public/example-template.json`
+# Generate a cv from a template
 
 - The data is in `/public/example-template.json` to customize edit the fields
 

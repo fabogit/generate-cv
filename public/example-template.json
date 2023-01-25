@@ -73,10 +73,9 @@
 			}
 		],
 		"softSkills": [
-			"Metodologia Agile/Scrum",
-			"Indipendenza e problem solving",
-			"Capacità di collaborare in team remoto e internazionale, Pair programming",
-			"Costante interesse ad apprendere nuove abilità e perfezionare quelle già conosciute"
+			"Agile/Scrum",
+			"problem solving",
+			"ecc",
 		],
 		"it": {
 			"languages": [
@@ -207,7 +206,7 @@
 				]
 			},
 			"os": {
-				"description": "Installazione ed amministrazione sistemi operativi",
+				"description": "text here",
 				"list": [
 					{
 						"logo": "/images/skills/arch.png",
@@ -236,13 +235,12 @@
 				]
 			},
 			"extra": [
-				"Tool di versionamento Git",
-				"Sviluppo web di tipo SPA e SSR, Html (Handlebars, Ejs) & Css (Bootstrap, Tailwindcss, Scss)",
-				"Utilizzo di container Docker per sviluppi in locale e in cloud (dockerfile, docker-compose)",
-				"Unit test ed Integration test (Jest, Vitest)",
+				"Git",
+				"SPA/SSR, Html (Handlebars, Ejs) & Css (Bootstrap, Tailwindcss, Scss)",
+				"Docker (dockerfile, docker-compose)",
+				"Unit test, Integration test (Jest, Vitest)",
 				"Messaging system (Nats), WebRTC, Websocket (Socket.io)",
-				"Installazione ed amministrazione di sistemi operativi e macchine virtuali (Oracle VirtualBox, VMWare Workstation)",
-				"Conoscenza dei fondamenti di analisi dati, machine learning, big data, ETL (Pandas, Numpy, Matplotlib, Seaborn, TensorFlow, Keras)"
+				"Oracle VirtualBox, VMWare Workstation"
 			]
 		}
 	}
